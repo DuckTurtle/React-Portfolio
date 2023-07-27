@@ -2,16 +2,16 @@ import React from 'react';
 import Cards from "./pcards"
 
 function Portfolio() {
-    const [projects] = useState([
+    const projects = [
         {
             title: 'CharaCraft',
-            src: require('../images/characraft.JPG'),
+            src: require('../images/characraft.jpg'),
             git: 'https://github.com/DuckTurtle/CharaCraft',
             app: 'https://characraft-27a6d9fbde68.herokuapp.com/',
         },
         {
             title: 'TreeFinder',
-            src: require('../images/treefinder.JPG'),
+            src: require('../images/treefinder.jpg'),
             git: 'https://github.com/DuckTurtle/Full-Throttle--TreeFinder-The-Park-Finder-App',
             app: ' https://duckturtle.github.io/Full-Throttle--TreeFinder-The-Park-Finder-App/',
         },
@@ -23,7 +23,7 @@ function Portfolio() {
         },
         {
             title: 'ReadME Generator',
-            src: require('../images/readme.JPG'),
+            src: require('../images/readme.jpg'),
             git: 'https://github.com/DuckTurtle/UW-BootCamo-Week9-README-generator.',
             app: 'https://youtu.be/NS6VeFsQp70',
         },
@@ -40,12 +40,12 @@ function Portfolio() {
             app: 'https://github.com/DuckTurtle',
         },
        
-    ])
+    ]
     return (
         <div className='container'>
             {projects.map((project) => (
                 <Cards project={project} ></Cards>
-            ))}
+            ))};
         </div>
     )
 }

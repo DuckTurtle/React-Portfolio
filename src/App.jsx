@@ -1,51 +1,18 @@
 import React, { useState } from 'react'
+import { Outlet } from 'react-router-dom';
 import Header from "./components/header";
-import Contact from "./components/contact"
-import About from "./components/about.jsx"
-import Portfolio from "./components/portfolio";
-import Resume from "./components/resume";
 import './App.css'
 
 function App() {
-  const [parts] = useState([
-    {
-      name: 'About Me'
-    },
-    {
-      name: 'Contact'
-    },
-    {
-      name: 'Portfolio'
-    },
-    {
-      name: 'Resume'
-    }
-  ])
-  const [currentPage, setCurrentPage] = useState(parts(0))
 
   return (
     <>
        <div id='centerfold' className="container d-flex" style={{ minHeight: "175px", flexDirection: "row"}}>
-            <Header
-                pages={parts}
-                setCurrentPage={setCurrentPage}
-                currentPage={currentPage}
-            ></Header>
+            <Header></Header>
             <main>
-                {(() => {
-                    switch (currentPage.name) {
-                        case 'Contact':
-                            return <Contact />
-                        case 'Portfolio':
-                            return <Portfolio />
-                        case 'Resume':
-                            return <Resume />
-                        default:
-                            return <About />
-                    }
-                })()}
+            <Outlet />
             </main>
-            <Footer>
+            <footer>
             <div className='justify-content-center'>
             <a href="https://github.com/DuckTurtle"
                 target={'_blank'}
@@ -66,7 +33,7 @@ function App() {
                 </svg>
             </a>
         </div>
-            </Footer>
+            </footer>
         
       </div>
     </>

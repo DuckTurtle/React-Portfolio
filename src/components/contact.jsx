@@ -1,5 +1,6 @@
 import React,{ useState } from 'react';
-import {capFirst, checkEmail} from '../../utils/helper'
+import {capFirst, checkEmail} from '../utils/helper'
+
 
 function Contact() {
     const { name, email, message } = pices;
@@ -74,4 +75,4 @@ function Contact() {
     )
 }
 
-export default Resume;
+export default Contact;
