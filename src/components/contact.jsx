@@ -3,38 +3,43 @@ import {capFirst, checkEmail} from '../utils/helper'
 
 
 function Contact() {
-    const { name, email, message } = pices;
-    const [pices, setFormState] = useState({ name: '', email: '', message: '' });
+    const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
 
     function checkValues(e) {
-        if (e.target.name === 'email') {
-            const isEmail = checkEmail(e.target.value);
+    
+        const { name, value } = e.target;
+        if (name === 'email') {
+            const isEmail = checkEmail(value);
             if (!isEmail) {
                 setErrorMessage('Not A valid Email.');
             } else {
                 setErrorMessage('');
             }
         } else {
-            if (!e.target.value.length) {
+            if (!value.length) {
                 setErrorMessage(`${capFirst(e.target.name)} is required.`);
             } else {
                 setErrorMessage('');
             }
         }
-        if (!errorMessage) {
-            setFormState({ ...formState, [e.target.name]: e.target.value });
-        }
+        return name === 'name' ? setName(value) : name === 'email' ? setEmail(value) : setMessage(value)  
+        
     }
     
     function submitForm(e) {
         e.preventDefault();
-        document.querySelectorAll('.form-control').forEach((input) => input.value = "");
+        setName('');
+        setEmail('');
+        setMessage('');
     }
     return (
         <div className= "container">
             <h2>Contact Me</h2>
-            <form className="contact-form"onSubmit={submitForm}></form> 
+            <h3>Warning This Form has no backend yet. If you'd like to contact me do so at qschnell04@gmail.com</h3>
+            <form className="contact-form"onSubmit={submitForm}> 
                 <div className='form-group'>
                     <label htmlFor="name">Name:</label>
                     <input
@@ -71,6 +76,7 @@ function Contact() {
                     </div>
                 )}
                 <button className="contact-Bnt" type="submit">Submit</button>
+                </form>
         </div>
     )
 }

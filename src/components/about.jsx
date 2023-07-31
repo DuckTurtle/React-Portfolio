@@ -9,7 +9,7 @@ function About() {
         </div>
         <div className='row'>
             <div className='col d-flex justify-content-center'>
-                <img class="rounded-circle justify-content-center" src={mePhoto} alt="My Face" style={{ width: "120px", height: "120px" }} />
+                <img className="rounded-circle justify-content-center" src={mePhoto} alt="My Face" style={{ width: "120px", height: "120px" }} />
             </div>
             <div>
                 <p>

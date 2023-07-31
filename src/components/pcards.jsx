@@ -1,6 +1,7 @@
 import React from 'react';
 
-function Cards(project) {
+function Cards({project}) {
+    console.log(project)
     return (
         <div className='justify-content-center' >
             <div className="card workblock">
