@@ -1,5 +1,5 @@
 import React from 'react';
-import mePhoto from "../images/me.jpg"
+//import mePhoto from "../images/me.jpg"
 
 function About() {
     return (
@@ -9,7 +9,7 @@ function About() {
         </div>
         <div className='row'>
             <div className='col d-flex justify-content-center'>
-                <img className="rounded-circle justify-content-center" src={mePhoto} alt="My Face" style={{ width: "120px", height: "120px" }} />
+                <img className="rounded-circle justify-content-center" src="./src/images/me.jpg" alt="My Face" style={{ width: "120px", height: "120px" }} />
             </div>
             <div>
                 <p className="about">
