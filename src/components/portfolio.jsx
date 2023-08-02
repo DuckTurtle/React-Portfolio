@@ -5,46 +5,46 @@ function Portfolio() {
     const projects = [
         {
             title: 'CharaCraft',
-            src: require('../images/characraft.jpg'),
+            src: './src/images/characraft.jpg',
             git: 'https://github.com/DuckTurtle/CharaCraft',
             app: 'https://characraft-27a6d9fbde68.herokuapp.com/',
         },
         {
             title: 'TreeFinder',
-            src: require('../images/treefinder.jpg'),
+            src: './src/images/treefinder.jpg',
             git: 'https://github.com/DuckTurtle/Full-Throttle--TreeFinder-The-Park-Finder-App',
             app: ' https://duckturtle.github.io/Full-Throttle--TreeFinder-The-Park-Finder-App/',
         },
         {
             title: 'Email Regex Gist',
-            src: require('../images/Emain-Regex.png'),
+            src: './src/images/EmailRegex.png',
             git: 'https://gist.github.com/DuckTurtle/782773f1485ed0642c5af82d45ace7ff',
             app: 'https://gist.github.com/DuckTurtle/782773f1485ed0642c5af82d45ace7ff',
         },
         {
             title: 'ReadME Generator',
-            src: require('../images/readme.jpg'),
+            src: './src/images/readme.jpg',
             git: 'https://github.com/DuckTurtle/UW-BootCamo-Week9-README-generator.',
             app: 'https://youtu.be/NS6VeFsQp70',
         },
         {
             title: 'Soical NetWork API',
-            src: require('../images/sna.png'),
+            src: './src/images/sna.png',
             git: 'https://github.com/DuckTurtle/Social-Networking-Api',
             app: 'https://youtu.be/EmjVoF3kt2c',
         },
         {
             title: 'PlaceHolder For Project 3',
-            src: require('../images/cautiontape.PNG'),
+            src: './src/images/coutiontape.jpg',
             git: 'https://github.com/DuckTurtle',
             app: 'https://github.com/DuckTurtle',
         },
        
     ]
     return (
-        <div className='container'>
+        <div className='d-'>
             {projects.map((project) => (
-                <Cards project={project} ></Cards>
+                <Cards project={project} key={Math.random(1,1000)} ></Cards>
             ))};
         </div>
     )

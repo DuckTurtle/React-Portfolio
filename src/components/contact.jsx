@@ -3,39 +3,44 @@ import {capFirst, checkEmail} from '../utils/helper'
 
 
 function Contact() {
-    const { name, email, message } = pices;
-    const [pices, setFormState] = useState({ name: '', email: '', message: '' });
+    const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
 
     function checkValues(e) {
-        if (e.target.name === 'email') {
-            const isEmail = checkEmail(e.target.value);
+    
+        const { name, value } = e.target;
+        if (name === 'email') {
+            const isEmail = checkEmail(value);
             if (!isEmail) {
                 setErrorMessage('Not A valid Email.');
             } else {
                 setErrorMessage('');
             }
         } else {
-            if (!e.target.value.length) {
+            if (!value.length) {
                 setErrorMessage(`${capFirst(e.target.name)} is required.`);
             } else {
                 setErrorMessage('');
             }
         }
-        if (!errorMessage) {
-            setFormState({ ...formState, [e.target.name]: e.target.value });
-        }
+        return name === 'name' ? setName(value) : name === 'email' ? setEmail(value) : setMessage(value)  
+        
     }
     
     function submitForm(e) {
         e.preventDefault();
-        document.querySelectorAll('.form-control').forEach((input) => input.value = "");
+        setName('');
+        setEmail('');
+        setMessage('');
     }
     return (
-        <div className= "container">
+        <div className= "container contact">
             <h2>Contact Me</h2>
-            <form className="contact-form"onSubmit={submitForm}></form> 
-                <div className='form-group'>
+            <h3>Warning This Form has no backend, its simply to show off live validation. If you'd like to contact me do so at qschnell04@gmail.com</h3>
+            <form className="contact-form d-flex flex-column flex-wrap align-middle text-center justify-center "onSubmit={submitForm}> 
+                <div className='form-group f2'>
                     <label htmlFor="name">Name:</label>
                     <input
                     type="text"
@@ -45,7 +50,7 @@ function Contact() {
                     className="contact-input"
                     onChange={checkValues}></input>
                 </div>
-                <div className='form-group'>
+                <div className='form-group f2'>
                     <label htmlFor="email">Email:</label>
                     <input
                     type="text"
@@ -55,7 +60,7 @@ function Contact() {
                     className="contact-input"
                     onChange={checkValues}></input>
                 </div>
-                <div className='form-group'>
+                <div className='form-group' id= 'message'>
                     <label htmlFor="message">Message:</label>
                     <input
                     type="text"
@@ -70,7 +75,8 @@ function Contact() {
                         <p>{errorMessage}</p>
                     </div>
                 )}
-                <button className="contact-Bnt" type="submit">Submit</button>
+                <button className="contact-Bnt" id="sbt" type="submit">Submit</button>
+                </form>
         </div>
     )
 }
