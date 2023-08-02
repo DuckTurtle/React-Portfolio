@@ -17,7 +17,7 @@ There is no installation required. All applications should work on opening the w
 ## Usage
 This website has 4 features. At the top of the page, there are 3 quick-find links that jump you to different sections of the page. A page with my Current Resume on it. A form page that valatates the three input feilds as theyare typed. Then there is the portfolio page where 6 pices of my work are displayed with links to the live site and to the github reposatory.
 
-![picture of website](/assets/images/rectport.png)
+![picture of website](./src/images/rectport.png)
 
 ## License
 
