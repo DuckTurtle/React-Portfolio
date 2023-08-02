@@ -36,11 +36,11 @@ function Contact() {
         setMessage('');
     }
     return (
-        <div className= "container">
+        <div className= "container contact">
             <h2>Contact Me</h2>
-            <h3>Warning This Form has no backend yet. If you'd like to contact me do so at qschnell04@gmail.com</h3>
-            <form className="contact-form"onSubmit={submitForm}> 
-                <div className='form-group'>
+            <h3>Warning This Form has no backend, its simply to show off live validation. If you'd like to contact me do so at qschnell04@gmail.com</h3>
+            <form className="contact-form d-flex flex-column flex-wrap align-middle text-center justify-center "onSubmit={submitForm}> 
+                <div className='form-group f2'>
                     <label htmlFor="name">Name:</label>
                     <input
                     type="text"
@@ -50,7 +50,7 @@ function Contact() {
                     className="contact-input"
                     onChange={checkValues}></input>
                 </div>
-                <div className='form-group'>
+                <div className='form-group f2'>
                     <label htmlFor="email">Email:</label>
                     <input
                     type="text"
@@ -60,7 +60,7 @@ function Contact() {
                     className="contact-input"
                     onChange={checkValues}></input>
                 </div>
-                <div className='form-group'>
+                <div className='form-group' id= 'message'>
                     <label htmlFor="message">Message:</label>
                     <input
                     type="text"
@@ -75,7 +75,7 @@ function Contact() {
                         <p>{errorMessage}</p>
                     </div>
                 )}
-                <button className="contact-Bnt" type="submit">Submit</button>
+                <button className="contact-Bnt" id="sbt" type="submit">Submit</button>
                 </form>
         </div>
     )

@@ -17,7 +17,7 @@ function Portfolio() {
         },
         {
             title: 'Email Regex Gist',
-            src: './src/images/Emain-Regex.png',
+            src: './src/images/EmailRegex.png',
             git: 'https://gist.github.com/DuckTurtle/782773f1485ed0642c5af82d45ace7ff',
             app: 'https://gist.github.com/DuckTurtle/782773f1485ed0642c5af82d45ace7ff',
         },
@@ -35,14 +35,14 @@ function Portfolio() {
         },
         {
             title: 'PlaceHolder For Project 3',
-            src: './src/images/cautiontape.PNG',
+            src: './src/images/coutiontape.jpg',
             git: 'https://github.com/DuckTurtle',
             app: 'https://github.com/DuckTurtle',
         },
        
     ]
     return (
-        <div className='container'>
+        <div className='d-'>
             {projects.map((project) => (
                 <Cards project={project} key={Math.random(1,1000)} ></Cards>
             ))};

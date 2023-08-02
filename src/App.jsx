@@ -2,18 +2,20 @@ import React, { useState } from 'react'
 import { Outlet } from 'react-router-dom';
 import Header from "./components/header";
 import './App.css'
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 
 function App() {
 
   return (
     <>
-       <div id='centerfold' className="container d-flex" style={{ minHeight: "175px", flexDirection: "row"}}>
+       <div id='centerfold' className="d-flex flex-column" style={{ minHeight: "175px", height: "100%", width:"100%"}}>
             <Header></Header>
-            <main>
+            <main id='mains'>
             <Outlet />
             </main>
             <footer>
-            <div className='justify-content-center'>
+            <div className='justify-content-center profile-footer'>
             <a href="https://github.com/DuckTurtle"
                 target={'_blank'}
                 rel="noreferrer"

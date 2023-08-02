@@ -5,9 +5,9 @@ function Header() {
    
 
     return (
-        <nav className="navbar navbar-expand-lg d-flex row">
-            <div className='container-fluid'>
-                <h2 className='navbar-brand'> Quinton Schnell</h2>
+        <nav className="d-flex row navbar navbar-expand-lg" id='niv'>
+            <div className='container-fluid d-flex flex-row align-middle text-center justify-center w-100 h-100 pl-1'>
+                <h2 className='navbar-brand d-flex flex-row align-middle text-center justify-center' id='top2'> Quinton Schnell</h2>
                 <Nav />
             </div>
         </nav>

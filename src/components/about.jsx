@@ -12,7 +12,7 @@ function About() {
                 <img className="rounded-circle justify-content-center" src={mePhoto} alt="My Face" style={{ width: "120px", height: "120px" }} />
             </div>
             <div>
-                <p>
+                <p className="about">
                     Hi, My name is Quinton Schnell. I grew up in DeForest WI, and went to school there. I attended college through the University of Wisconsin's Extended campus.  I enjoy bowling,
                     disc golf, and the occasional book. I am passionate about technology and doing things with my hands like welding, woodworking, and also 3D Printing.<br></br>
                     I have been working since I was 15 and have experience leading a team in a workspace. I'm quick to learn new things, I always put my best foot forward, and I don't 
