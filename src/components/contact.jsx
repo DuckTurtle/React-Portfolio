@@ -46,6 +46,7 @@ function Contact() {
                     type="text"
                     placeholder="Your Name"
                     value={name}
+                    required
                     name="name"
                     className="contact-input"
                     onChange={checkValues}></input>
@@ -56,6 +57,7 @@ function Contact() {
                     type="text"
                     placeholder="Your Email"
                     value={email}
+                    required
                     name="email"
                     className="contact-input"
                     onChange={checkValues}></input>
@@ -66,6 +68,7 @@ function Contact() {
                     type="text"
                     placeholder="Add a message."
                     value={message}
+                    required
                     name="message"
                     className="contact-input"
                     onChange={checkValues}></input>

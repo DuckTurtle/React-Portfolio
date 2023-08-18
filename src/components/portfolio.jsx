@@ -34,10 +34,10 @@ function Portfolio() {
             app: 'https://youtu.be/EmjVoF3kt2c',
         },
         {
-            title: 'PlaceHolder For Project 3',
-            src: './images/coutiontape.jpg',
-            git: 'https://github.com/DuckTurtle',
-            app: 'https://github.com/DuckTurtle',
+            title: 'GamersGuild',
+            src: './images/gamerGuild.png',
+            git: 'https://github.com/jayson-baker/Gamers_Guild',
+            app: 'https://gamers-guild-024e835506e9.herokuapp.com/',
         },
        
     ]
