@@ -1,5 +1,5 @@
 import React from 'react';
-import resumePDF from "../images/Quinton_Schnell_Resume(AUG2023).pdf"
+import resumePDF from "../images/Quinton Schnell Resume 2026-Updated.pdf"
 
 function Resume() {
     return (
