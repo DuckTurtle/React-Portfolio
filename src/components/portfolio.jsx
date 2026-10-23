@@ -5,7 +5,7 @@ function Portfolio() {
     const projects = [
         {
             title: 'CharaCraft',
-            src: './images/characraft.jpg',
+            src: './images/errorMessage.png',
             git: 'https://github.com/DuckTurtle/CharaCraft',
             app: 'https://characraft-27a6d9fbde68.herokuapp.com/',
         },
@@ -35,7 +35,7 @@ function Portfolio() {
         },
         {
             title: 'GamersGuild',
-            src: './images/gamerGuild.png',
+            src: './images/errorMessage.png',
             git: 'https://github.com/jayson-baker/Gamers_Guild',
             app: 'https://gamers-guild-024e835506e9.herokuapp.com/',
         },
